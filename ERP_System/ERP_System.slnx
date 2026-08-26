@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../ERP_System_Buisness/ERP_System_Buisness.csproj" />
+  <Project Path="../ERP_System_DataAccess/ERP_System_DataAccess.csproj" />
+  <Project Path="ERP_System.csproj" />
+</Solution>
