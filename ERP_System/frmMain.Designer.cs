@@ -72,7 +72,7 @@
             this.peopleToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
             this.peopleToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.peopleToolStripMenuItem1.Name = "peopleToolStripMenuItem1";
-            this.peopleToolStripMenuItem1.Size = new System.Drawing.Size(224, 36);
+            this.peopleToolStripMenuItem1.Size = new System.Drawing.Size(188, 36);
             this.peopleToolStripMenuItem1.Text = "Personnes";
             // 
             // usersToolStripMenuItem
@@ -80,7 +80,7 @@
             this.usersToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
             this.usersToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(188, 36);
             this.usersToolStripMenuItem.Text = "Client";
             // 
             // customersToolStripMenuItem
@@ -88,7 +88,7 @@
             this.customersToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
             this.customersToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.customersToolStripMenuItem.Name = "customersToolStripMenuItem";
-            this.customersToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.customersToolStripMenuItem.Size = new System.Drawing.Size(188, 36);
             this.customersToolStripMenuItem.Text = "Utilisateurs";
             // 
             // suplliersToolStripMenuItem
@@ -96,7 +96,7 @@
             this.suplliersToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
             this.suplliersToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.suplliersToolStripMenuItem.Name = "suplliersToolStripMenuItem";
-            this.suplliersToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.suplliersToolStripMenuItem.Size = new System.Drawing.Size(188, 36);
             this.suplliersToolStripMenuItem.Text = "Fournisseur";
             // 
             // settingToolStripMenuItem
@@ -125,6 +125,7 @@
             this.brandListToolStripMenuItem.Name = "brandListToolStripMenuItem";
             this.brandListToolStripMenuItem.Size = new System.Drawing.Size(247, 36);
             this.brandListToolStripMenuItem.Text = "Liste des marques";
+            this.brandListToolStripMenuItem.Click += new System.EventHandler(this.brandListToolStripMenuItem_Click);
             // 
             // frmMain
             // 

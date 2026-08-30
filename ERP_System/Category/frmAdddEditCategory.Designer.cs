@@ -62,10 +62,10 @@
             // lblMainTitle
             // 
             this.lblMainTitle.AutoSize = true;
-            this.lblMainTitle.Font = new System.Drawing.Font("Cairo", 12F);
+            this.lblMainTitle.Font = new System.Drawing.Font("Cairo", 16F);
             this.lblMainTitle.Location = new System.Drawing.Point(23, 23);
             this.lblMainTitle.Name = "lblMainTitle";
-            this.lblMainTitle.Size = new System.Drawing.Size(197, 37);
+            this.lblMainTitle.Size = new System.Drawing.Size(265, 50);
             this.lblMainTitle.TabIndex = 4;
             this.lblMainTitle.Text = "Ajouter une catégorie";
             // 
