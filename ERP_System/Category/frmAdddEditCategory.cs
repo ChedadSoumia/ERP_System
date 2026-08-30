@@ -67,7 +67,7 @@ namespace ERP_System.Category
                 this.Close();
                 return;
             }
-
+            lblCategoryID.Text = _Category.CategoryId.ToString();
             txtCategoryName.Text = _Category.CategoryName;
             cbCategoryParent.Text = _Category.CategoryParent.HasValue ? clsCategory.Find(_Category.CategoryParent.Value)?.CategoryName : "None";
 
@@ -135,7 +135,8 @@ namespace ERP_System.Category
             {
                 errorProvider1.SetError(txtCategoryName, null);
             }
-            if (clsCategory.IsCategoryExist(txtCategoryName.Text))
+
+            if (clsCategory.IsCategoryExist(txtCategoryName.Text) && txtCategoryName.Text != _Category.CategoryName)
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtCategoryName, "Ce nom de catégorie existe déjà.");

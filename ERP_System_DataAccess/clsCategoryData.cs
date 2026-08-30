@@ -189,7 +189,7 @@ namespace ERP_System_DataAccess
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
-                        command.Parameters.AddWithValue("@@Category_id", CategoryID);
+                        command.Parameters.AddWithValue("@Category_id", CategoryID);
                         command.Parameters.AddWithValue("@Category_name", CategoryName);
 
                         if (CategoryParent.HasValue)
@@ -197,7 +197,6 @@ namespace ERP_System_DataAccess
                         else
                             command.Parameters.AddWithValue("@Category_Parent", System.DBNull.Value);
 
-                        connection.Open();
                         rowsAffected = command.ExecuteNonQuery();
 
                     }
@@ -258,7 +257,7 @@ namespace ERP_System_DataAccess
 
                         command.Parameters.AddWithValue("@Category_id", CategoryID);
 
-                        connection.Open();
+                        
                         rowsAffected = command.ExecuteNonQuery();
 
                     }
