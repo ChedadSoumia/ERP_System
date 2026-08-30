@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="../ERP_System_Buisness/ERP_System_Buisness.csproj" />
-  <Project Path="../ERP_System_DataAccess/ERP_System_DataAccess.csproj" />
-  <Project Path="ERP_System.csproj" />
+  <Project Path="../ERP_System_Buisness/ERP_System_Buisness.csproj" Id="84a58f09-ae7c-4367-85f1-fbf204713a93" />
+  <Project Path="../ERP_System_DataAccess/ERP_System_DataAccess.csproj" Id="b5577643-d1d8-40de-8dcf-bf33c43d2e19" />
+  <Project Path="ERP_System.csproj" Id="271a425c-e7de-4cb2-8219-89828db1ebc5" />
 </Solution>
