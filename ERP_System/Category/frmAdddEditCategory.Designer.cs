@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSave = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblMainTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblCategoryID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCategoryName = new System.Windows.Forms.TextBox();
             this.cbCategoryParent = new System.Windows.Forms.ComboBox();
-            this.lblCategoryID = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -54,16 +57,17 @@
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Enregistrer";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // label1
+            // lblMainTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cairo", 12F);
-            this.label1.Location = new System.Drawing.Point(23, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 37);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Liste des catégories";
+            this.lblMainTitle.AutoSize = true;
+            this.lblMainTitle.Font = new System.Drawing.Font("Cairo", 12F);
+            this.lblMainTitle.Location = new System.Drawing.Point(23, 23);
+            this.lblMainTitle.Name = "lblMainTitle";
+            this.lblMainTitle.Size = new System.Drawing.Size(197, 37);
+            this.lblMainTitle.TabIndex = 4;
+            this.lblMainTitle.Text = "Ajouter une catégorie";
             // 
             // tableLayoutPanel1
             // 
@@ -84,6 +88,17 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(431, 140);
             this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // lblCategoryID
+            // 
+            this.lblCategoryID.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblCategoryID.AutoSize = true;
+            this.lblCategoryID.Font = new System.Drawing.Font("Cairo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoryID.Location = new System.Drawing.Point(186, 8);
+            this.lblCategoryID.Name = "lblCategoryID";
+            this.lblCategoryID.Size = new System.Drawing.Size(44, 29);
+            this.lblCategoryID.TabIndex = 3;
+            this.lblCategoryID.Text = "[???]";
             // 
             // label2
             // 
@@ -126,27 +141,21 @@
             this.txtCategoryName.Name = "txtCategoryName";
             this.txtCategoryName.Size = new System.Drawing.Size(209, 36);
             this.txtCategoryName.TabIndex = 1;
+            this.txtCategoryName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCategoryName_Validating);
             // 
             // cbCategoryParent
             // 
             this.cbCategoryParent.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbCategoryParent.Font = new System.Drawing.Font("Cairo", 9F);
             this.cbCategoryParent.FormattingEnabled = true;
-            this.cbCategoryParent.Location = new System.Drawing.Point(186, 103);
+            this.cbCategoryParent.Location = new System.Drawing.Point(186, 97);
             this.cbCategoryParent.Name = "cbCategoryParent";
             this.cbCategoryParent.Size = new System.Drawing.Size(209, 37);
             this.cbCategoryParent.TabIndex = 2;
             // 
-            // lblCategoryID
+            // errorProvider1
             // 
-            this.lblCategoryID.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblCategoryID.AutoSize = true;
-            this.lblCategoryID.Font = new System.Drawing.Font("Cairo", 9F);
-            this.lblCategoryID.Location = new System.Drawing.Point(186, 8);
-            this.lblCategoryID.Name = "lblCategoryID";
-            this.lblCategoryID.Size = new System.Drawing.Size(44, 29);
-            this.lblCategoryID.TabIndex = 3;
-            this.lblCategoryID.Text = "[???]";
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmAdddEditCategory
             // 
@@ -156,13 +165,15 @@
             this.ClientSize = new System.Drawing.Size(491, 343);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblMainTitle);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmAdddEditCategory";
-            this.Text = "Add Edit Category";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ajouter une catégorie";
             this.Load += new System.EventHandler(this.frmAdddEditCategory_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,7 +182,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMainTitle;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -179,5 +190,6 @@
         private System.Windows.Forms.TextBox txtCategoryName;
         private System.Windows.Forms.ComboBox cbCategoryParent;
         private System.Windows.Forms.Label lblCategoryID;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -67,7 +67,7 @@ namespace ERP_System_DataAccess
                        new SqlConnection(clsDataAccessSettings.ConnectionString))
                 {
                     connection.Open();
-                    using (SqlCommand command = new SqlCommand("spu_GetCategoryByID", connection))
+                    using (SqlCommand command = new SqlCommand("spu_GetCategoryByName", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
@@ -210,7 +210,7 @@ namespace ERP_System_DataAccess
 
         public static bool IsCategoryExist(string CategoryName)
         {
-            int result ;
+            
             try
             {
                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
@@ -219,9 +219,18 @@ namespace ERP_System_DataAccess
                     using (SqlCommand command = new SqlCommand("spu_CheckCategoryExists", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@Category_name", CategoryName);
+                        command.Parameters.AddWithValue("@Category_name",(object)CategoryName??DBNull.Value);
 
-                        result = (int)command.ExecuteScalar();
+                        SqlParameter returnParameter = new SqlParameter("@ReturnVal", SqlDbType.Int)
+                        {
+                            Direction = ParameterDirection.ReturnValue
+                        };
+
+                        command.Parameters.Add(returnParameter);
+                        command.ExecuteNonQuery();
+
+                        int result = (int)returnParameter.Value;
+
 
                         return (result == 1);
                     }
