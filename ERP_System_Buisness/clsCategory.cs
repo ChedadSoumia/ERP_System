@@ -91,6 +91,10 @@ namespace ERP_System_Buisness
             return clsCategoryData.IsCategoryExist(CategoryName);
         }
 
+        public static bool DeleteCategory(int CategoryID)
+        {
+            return clsCategoryData.DeleteCategory(CategoryID);
+        }
         public bool Save()
         {
             switch (Mode)

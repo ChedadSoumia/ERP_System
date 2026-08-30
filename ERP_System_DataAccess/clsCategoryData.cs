@@ -233,6 +233,35 @@ namespace ERP_System_DataAccess
                 return false;
             }
         }
+
+        public static bool DeleteCategory(int CategoryID)
+        {
+            int rowsAffected = 0;
+            try
+            {
+                using (SqlConnection connection =
+                       new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand("spu_DeleteCategory", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.AddWithValue("@Category_id", CategoryID);
+
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
+            return (rowsAffected > 0);
+        
+        }
     }
 
 }
