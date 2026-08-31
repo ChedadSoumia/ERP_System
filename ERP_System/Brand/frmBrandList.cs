@@ -12,6 +12,7 @@ namespace ERP_System.Brand
 {
     public partial class frmBrandList : Form
     {
+
         public frmBrandList()
         {
             InitializeComponent();
@@ -21,6 +22,11 @@ namespace ERP_System.Brand
         {
             frmAddEditBrand AddNewBrand = new frmAddEditBrand();
             AddNewBrand.ShowDialog();
+        }
+
+        private void frmBrandList_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
