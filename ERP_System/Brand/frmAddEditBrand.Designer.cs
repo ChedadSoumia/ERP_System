@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblBrandID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -35,7 +36,9 @@
             this.txtBrandName = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.lblMainTitle = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -96,6 +99,7 @@
             this.txtBrandName.Name = "txtBrandName";
             this.txtBrandName.Size = new System.Drawing.Size(209, 36);
             this.txtBrandName.TabIndex = 1;
+            this.txtBrandName.Validating += new System.ComponentModel.CancelEventHandler(this.txtBrandName_Validating);
             // 
             // btnSave
             // 
@@ -111,6 +115,7 @@
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Enregistrer";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // lblMainTitle
             // 
@@ -121,6 +126,10 @@
             this.lblMainTitle.Size = new System.Drawing.Size(349, 50);
             this.lblMainTitle.TabIndex = 7;
             this.lblMainTitle.Text = "Ajouter une nouvelle marque";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmAddEditBrand
             // 
@@ -135,8 +144,10 @@
             this.Name = "frmAddEditBrand";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ajouter une nouvelle marque";
+            this.Load += new System.EventHandler(this.frmAddEditBrand_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +162,6 @@
         private System.Windows.Forms.TextBox txtBrandName;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lblMainTitle;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

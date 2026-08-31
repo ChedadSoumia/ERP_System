@@ -63,7 +63,7 @@ namespace ERP_System.Category
             _Category = clsCategory.Find(_CategoryID);
             if (_Category == null)
             {
-                MessageBox.Show("Aucune catégorie avec l’ID = " + _CategoryID, "Catégorie introuvable", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Aucune catégorie avec l’ID = " + _CategoryID, " Catégorie introuvable", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 this.Close();
                 return;
             }

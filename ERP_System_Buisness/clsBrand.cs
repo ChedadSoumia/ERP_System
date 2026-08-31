@@ -74,6 +74,11 @@ namespace ERP_System_Buisness
             return clsBrandData.DeleteBrand(BrandID);
         }
 
+        public static bool IsBrandExist(string BrandName)
+        {
+            return clsBrandData.IsBrandExist(BrandName);
+        }
+
         public bool Save()
         {
             switch (Mode)
