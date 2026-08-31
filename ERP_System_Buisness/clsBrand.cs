@@ -17,7 +17,7 @@ namespace ERP_System_Buisness
 
         public clsBrand()
         {
-            BrandID = -;
+            BrandID = -1;
             BrandName = "";
             Mode = enMode.eAddNew;
         }
@@ -37,6 +37,7 @@ namespace ERP_System_Buisness
         {
             return clsBrandData.UpdateBrand(this.BrandID, this.BrandName);
         }
+
         public static clsBrand Find(int BrandID)
         {
             string brandName = "";
@@ -50,7 +51,6 @@ namespace ERP_System_Buisness
                 return null;
             }
         }
-
         public static clsBrand Find(string BrandName)
         {
             int brandID = -1;

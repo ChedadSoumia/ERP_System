@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ERP_System_DataAccess
 {
-    public static class clsBrandData
+    public class clsBrandData
     {
         public static bool GetBrandByID(int BrandID, ref string BrandName)
         {
