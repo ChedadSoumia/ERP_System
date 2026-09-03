@@ -1,4 +1,5 @@
-﻿using ERP_System.Category;
+﻿using ERP_System.Brand;
+using ERP_System.Category;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,13 @@ namespace ERP_System
         private void categoryListToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCategoryList categoryList = new frmCategoryList();
-            categoryList.ShowDialog();        }
+            categoryList.ShowDialog();        
+        }
+
+        private void brandListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBrandList brandList = new frmBrandList();
+            brandList.ShowDialog();
+        }
     }
 }
